@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.card {
+    width: 22rem;
+    height: 36rem;
+    border: solid black 2px;
+    overflow-y: scroll;
+    margin: 7px;
+    color: black;
+    display: inline-block;
+}
+
+#featuredArticles {
+    overflow-y: scroll;
+   
+}
+
+#scrapeBtn {
+    margin-right: 5px;
+}
+
+
+

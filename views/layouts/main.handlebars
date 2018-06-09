@@ -11,7 +11,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
-        
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
@@ -28,7 +28,22 @@
 
 <body>
 
-    <div class='container'>
+    <header>
+        <nav class="navbar fixed-top navbar-dark bg-dark ">
+
+            <a class="navbar-brand mb-0 h1" href="articles">Just Do It</a>
+            <form class="form-inline justify-content-end">
+                <button id="scrapeBtn" class="btn btn-outline-warning" type="button">Scrape</button>
+                <button id="savedBtn" class="btn btn-outline-primary" type="button">Saved Articles</button>
+            </form>
+        </nav>
+    </header>
+
+<br>
+<br>
+<br>
+
+    <div class="container flex-row">
 
         <div class="jumbotron">
             <h1 class='text-center'>Most Lit Sports News</h1>

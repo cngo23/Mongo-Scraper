@@ -1,0 +1,28 @@
+<div class="flex-row text-center">
+    <div id="featuredArticles " class="flex-column">
+        {{#each articles}}
+        <div class="card p-2" id={{this._id}}>
+            <img class="card-img-top img-fluid" src= {{this.img}} >
+            <div class="card-body p-2">
+                <div id="artCont" class="text-center">
+                <h5 class="card-title p-2">{{this.title}}</h5>
+                <p class="card-text p-2">{{this.summary}}</p>
+                <a href={{this.link}} class="btn btn-primary">Full Article</a>
+                
+
+                {{#unless this.saved}}
+                <button class='btn btn-primary text-center savethis'>Save article</button>
+                {{/unless}} 
+                
+                {{#if this.saved}}
+                <button class='btn btn-primary text-center' disabled>Article saved</button>
+                {{/if}}
+
+           
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</div>

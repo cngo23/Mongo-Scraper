@@ -1,0 +1,67 @@
+
+
+{{#each articles}}
+
+<div class='card'>
+
+    <div class='card-header'>
+
+        <div class='row'>
+            <div class='col-sm-8'>
+                <a href={{this.link}}>
+                    <h4>{{this.title}}</h4>
+                </a>
+            </div>
+
+            <div class='col-sm-2'>
+
+                <button type="button" class='btn btn-info text-center launch' data-id={{this.id}}>View comments</button>
+
+            </div>
+
+            <div class='col-sm-2'>
+
+                <button type="button" class='btn btn-danger text-center remove' id={{this.id}}>Remove article</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class='card-body'>
+        <p class='card-text'>{{this.summary}}</p>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="notesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+
+                </h5>
+            </div>
+            <div class="modal-body">
+
+                <div id='noteWindow'></div>
+
+                <form>
+                    <div class="form-group">
+                        <label for="enterComment">Enter your comment here</label>
+                        <input type="text" class="form-control" id="enterNote" placeholder="Type comment here">
+                        <button type="submit" class="btn btn-primary postNote">Post Note</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary closeModal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/each}}
